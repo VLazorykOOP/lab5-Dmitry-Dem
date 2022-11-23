@@ -1,58 +1,24 @@
-﻿// See https://aka.ms/new-console-template for more information
-/// <summary>
-///  Top-level statements 
-///  Код програми (оператори)  вищого рівня
-/// </summary>
-///
-Console.WriteLine("Lab5 C# ");
-AnyFunc();
+﻿using Lab5CSharp;
 
-/// <summary>
-/// 
-///  Top-level statements must precede namespace and type declarations.
-/// At the top-level methods/functions can be defined and used
-/// На верхньому рівні можна визначати та використовувати методи/функції
-/// </summary>
-void AnyFunc()
+Console.WriteLine("Lab5 C# Demenchuk Dmytro");
+void testTask1()
 {
-    Console.WriteLine(" Some function in top-level");
+    Console.WriteLine("\n\nInsuranceCompany Enter: Name, Address, Classification, Type of Property");
+    InsuranceCompany ins = new InsuranceCompany(Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
+    ins.show();
+
+    Console.WriteLine("\n\nPlant Enter: Name, Address, Classification, Owner");
+    Plant plt = new Plant(Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
+    plt.show();
+
+    Console.WriteLine("\n\nOilGasCompany Enter: Name, Address, Classification, Owner, The number pumping stations, The number gas processing plants");
+    OilGasCompany ogc = new OilGasCompany(Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
+    ogc.show();
+
+    Console.WriteLine("\n\n");
 }
-Console.WriteLine("Problems 1 ");
-AnyFunc();
-//  приклад класів
-UserClass cl = new UserClass();
-cl.Name = " UserClass top-level ";
-User.UserClass cl2 = new();
-cl2.Name = " UserClass namespace User ";
 
 
 
 
-/// <summary>
-/// 
-/// Top-level statements must precede namespace and type declarations.
-/// Оператори верхнього рівня мають передувати оголошенням простору імен і типу.
-/// Створення класу(ів) або оголошенням простору імен є закіченням  іструкцій верхнього рівня
-/// 
-/// </summary>
 
-namespace User
-{
-    class UserClass
-    {
-        public string Name { get; set; }
-       public  UserClass()
-        {
-            Name = "NoName";
-        }
-        UserClass(string n)
-        {
-            Name = n;
-        }
-    }
-
-}
-class UserClass
-{
-    public string Name { get; set; }
-}
